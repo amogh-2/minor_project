@@ -1,0 +1,185 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Cryptographic Algorithm Benchmarking
+  </title>`
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .sidebar {
+     transition: transform 0.3s ease-in-out;
+     transform: translateX(100%);
+   }
+   .sidebar:hover {
+     transform: translateX(0);
+   }
+  </style>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-600 p-4 flex justify-between items-center">
+   <a class="text-white text-2xl font-bold" href="#">
+    CryptoBench
+   </a>
+   <div class="relative">
+    <div class="text-white cursor-pointer">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </div>
+    <div class="sidebar absolute right-0 top-0 mt-12 bg-blue-600 text-white w-48 p-4 rounded-lg shadow-lg">
+     <ul class="space-y-4">
+      <li>
+       <a class="block" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="block" href="#">
+        Algorithms
+       </a>
+      </li>
+      <li>
+       <a class="block" href="#">
+        Results
+       </a>
+      </li>
+      <li>
+       <a class="block" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="block" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="bg-blue-500 text-white py-20">
+   <div class="container mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-4">
+     Benchmark Cryptographic Algorithms
+    </h1>
+    <p class="text-lg mb-8">
+     Test and compare the performance of various cryptographic algorithms.
+    </p>
+    <a class="bg-white text-blue-500 px-6 py-3 rounded-full font-bold" href="#aes-128">
+     Get Started
+    </a>
+   </div>
+  </section>
+  <!-- AES-128 Section -->
+  <section class="py-20" id="aes-128">
+   <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">
+     AES-128 CBC Mode Benchmarking
+    </h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg mt-10">
+        <h3 class="text-xl font-bold mb-4">
+         Select Data Type to Encrypt
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+         <div>
+          <label class="block text-gray-700 font-bold mb-2" for="data-type">
+           Data Type
+          </label>
+          <select class="w-full p-2 border rounded" id="data-type">
+           <option value="text">
+            Text
+           </option>
+           <option value="image">
+            Image
+           </option>
+           <option value="voice">
+            Voice
+           </option>
+           <option value="video">
+            Video
+           </option>
+           <option value="custom">
+            Custom
+           </option>
+          </select>
+         </div>
+         <div>
+          <label class="block text-gray-700 font-bold mb-2" for="data-size">
+           Data Size
+          </label>
+          <input class="w-full p-2 border rounded" id="data-size" type="text"/>
+         </div>
+         <div>
+          <label class="block text-gray-700 font-bold mb-2" for="custom-data">
+           Custom Data (if selected)
+          </label>
+          <input class="w-full p-2 border rounded" id="custom-data" type="file"/>
+         </div>
+        </div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded mt-6">
+         Start Benchmark
+        </button>
+       </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+     <h3 class="text-xl font-bold mb-4">
+      Benchmarked Parameters
+     </h3>
+     <div>
+        <label class="block text-gray-700 font-bold mb-2" for="time-encrypt">
+         Time to Encrypt
+        </label>
+        <input class="w-full p-2 border rounded" id="time-encrypt" type="text"/>
+       </div>
+  
+       <div>
+        <label class="block text-gray-700 font-bold mb-2" for="time-decrypt">
+         Time to Decrypt
+        </label>
+        <input class="w-full p-2 border rounded" id="time-decrypt" type="text"/>
+       </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+       <label class="block text-gray-700 font-bold mb-2" for="hardware">
+        Processor Used
+       </label>
+       <input class="w-full p-2 border rounded" id="hardware" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-bold mb-2" for="os">
+        OS Used
+       </label>
+       <input class="w-full p-2 border rounded" id="os" type="text"/>
+      </div>
+
+      <div>
+       <label class="block text-gray-700 font-bold mb-2" for="time-generate-key">
+        Time to Generate Key
+       </label>
+       <input class="w-full p-2 border rounded" id="time-generate-key" type="text"/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-bold mb-2" for="key-size">
+        Key Size
+       </label>
+       <input class="w-full p-2 border rounded" id="key-size" type="text"/>
+      </div>
+     </div>
+    </div>
+    
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-6">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2023 CryptoBench. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
